@@ -1,0 +1,14 @@
+<div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+  <h1>Student Grade Generator</h1>
+
+  <div>
+    <input [(ngModel)]="studentName" placeholder="Enter Student Name">
+    <input type="number" [(ngModel)]="marks" placeholder="Enter Marks (0-100)">
+    <button (click)="generateGrade()">Get Grade</button>
+  </div>
+
+  <div *ngIf="grade" style="margin-top: 20px;">
+    <h2>Result for: {{ studentName }}</h2>
+    <p>Your Grade is: <strong style="font-size: 24px;">{{ grade }}</strong></p>
+  </div>
+</div>
